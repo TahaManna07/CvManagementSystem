@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .  # Utiliser le contexte racine du projet
+      dockerfile: cv-management/Dockerfile
+    ports:
+      - "8089:80"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: .  # Utiliser le contexte racine du projet
+      dockerfile: Gemini/Dockerfile
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    ports:
+      - "5000:5000"

@@ -1,0 +1,72 @@
+/* about.component.css */
+
+/* Style pour la section About */
+.about-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #003f5c;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #003f5c;
+  margin-top: 20px;
+  border-bottom: 2px solid #003f5c;
+  padding-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-item {
+  margin-bottom: 20px;
+}
+
+.tech-item h3 {
+  color: #003f5c;
+  margin-bottom: 10px;
+}
+
+.tech-item p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Style pour les coordonnées */
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #003f5c; /* Couleur des icônes */
+  font-size: 20px; /* Taille des icônes */
+}
+
+.contact-info a {
+  color: #003f5c;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.justified-text {
+  text-align: justify;
+}

@@ -1,0 +1,53 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Télécharger un CV</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <div class="file-upload-container">
+        <!-- Bouton stylé pour sélectionner le fichier -->
+        <button mat-raised-button color="primary" type="button" (click)="fileInput.click()">
+          Choisir un fichier
+        </button>
+        <!-- Input file caché -->
+        <input type="file" #fileInput (change)="onFileSelected($event)" hidden />
+        <!-- Affichage du nom du fichier sélectionné -->
+        <span *ngIf="selectedFile" class="file-name">{{ selectedFile.name }}</span>
+      </div>
+
+      <!-- Bouton de soumission centré -->
+      <div class="submit-button-container">
+        <button mat-raised-button class="custom-submit-button" type="submit" [disabled]="!selectedFile || loading">
+          Voir les résultats
+        </button>
+      </div>
+    </form>
+
+    <!-- Spinner qui apparaît pendant le chargement -->
+    <div *ngIf="loading" class="spinner-container">
+      <mat-spinner [diameter]="50"></mat-spinner>
+    </div>
+
+    <div *ngIf="error" class="error">
+      <mat-card>
+        <mat-card-content>
+          <mat-icon color="warn">error</mat-icon>
+          {{ error }}
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div *ngIf="extractedData && !loading" class="result">
+      <mat-card>
+        <mat-card-title>Informations Extraites</mat-card-title>
+        <mat-card-content>
+          <p><strong>Nom:</strong> {{ extractedData['Full Name'] }}</p>
+          <p><strong>Téléphone:</strong> {{ extractedData['Phone Number'] }}</p>
+          <p><strong>Email:</strong> {{ extractedData['Email Address'] }}</p>
+          <p><strong>Compétences techniques:</strong> {{ extractedData['Technical Skills'] }}</p>
+          <p><strong>Profil:</strong> {{ extractedData['Candidate Profile'] }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </mat-card-content>
+</mat-card>

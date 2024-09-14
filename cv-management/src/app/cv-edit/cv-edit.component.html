@@ -1,0 +1,37 @@
+<div class="cv-edit-container">
+  <form [formGroup]="cvForm" (ngSubmit)="save()">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Modifier les données : </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-form-field appearance="outline">
+          <mat-label>Nom Complet</mat-label>
+          <input matInput formControlName="full_name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Adresse Email</mat-label>
+          <input matInput formControlName="email_address">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Numéro de Téléphone</mat-label>
+          <input matInput formControlName="phone_number">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Compétences Techniques</mat-label>
+          <input matInput formControlName="technical_skills">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Profil du Candidat</mat-label>
+          <input matInput formControlName="candidate_profile">
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit">Enregistrer</button>
+      </mat-card-content>
+    </mat-card>
+  </form>
+</div>

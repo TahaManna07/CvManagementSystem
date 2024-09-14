@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <div class="nav-buttons">
+      <button mat-button [routerLink]="['/home']">
+        <mat-icon>home</mat-icon>
+        Accueil
+      </button>
+      <button mat-button [routerLink]="['/upload']">
+        <mat-icon>cloud_upload</mat-icon>
+        Télécharger un CV
+      </button>
+      <button mat-button [routerLink]="['/list-cvs']">
+        <mat-icon>list_alt</mat-icon>
+        Liste des CVs
+      </button>
+      <button mat-button [routerLink]="['/chart']">
+        <mat-icon>bar_chart</mat-icon>
+        Visualisation
+      </button>
+      <button mat-button [routerLink]="['/about']">
+        <mat-icon>perm_identity</mat-icon>
+        À propos
+      </button>
+
+    </div>
+<!--    <button mat-button class="admin-logout-button" [routerLink]="['/']">-->
+<!--      <mat-icon>logout</mat-icon>-->
+<!--      Déconnexion-->
+<!--    </button>-->
+  </mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
+
+

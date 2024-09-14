@@ -1,0 +1,80 @@
+<mat-card>
+  <mat-card-content>
+    <div class="table-search-container">
+      <div class="search-container">
+        <label for="filter">Filtrer les données :</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Rechercher</mat-label>
+          <input matInput id="filter" placeholder="Entrez un mot-clé pour filtrer" (input)="applyFilter($event)">
+        </mat-form-field>
+      </div>
+
+    </div>
+
+    <div class="table-container">
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+        <ng-container matColumnDef="full_name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Nom Complet</th>
+          <td mat-cell *matCellDef="let element">{{ element.full_name }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email_address">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Adresse Email</th>
+          <td mat-cell *matCellDef="let element">{{ element.email_address }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone_number">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="phone-number">Numéro de Téléphone</th>
+          <td mat-cell *matCellDef="let element" class="phone-number">{{ element.phone_number }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="technical_skills">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header class="technical-skills">Compétences Techniques</th>
+          <td mat-cell *matCellDef="let element" class="technical-skills">{{ element.technical_skills }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="candidate_profile">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Profil du Candidat</th>
+          <td mat-cell *matCellDef="let element">{{ element.candidate_profile }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Actions</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-button (click)="viewCVDetails(element)">
+              <mat-icon>visibility</mat-icon> Voir
+            </button>
+            <button mat-button [routerLink]="['/cvs/edit', element.id]">
+              <mat-icon>edit</mat-icon> Modifier
+            </button>
+            <button mat-button (click)="deleteCV(element.id)">
+              <mat-icon>delete</mat-icon> Supprimer
+            </button>
+            <button mat-button (click)="downloadPDF(element.id)">
+              <mat-icon>download</mat-icon> Download
+            </button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+    </div>
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+  </mat-card-content>
+</mat-card>
+
+<!-- Card to show CV details -->
+<div class="cv-detail-container" *ngIf="selectedCV">
+  <mat-card>
+    <mat-card-content>
+      <h2>CV Details</h2>
+      <p><strong>Full Name:</strong> {{ selectedCV.full_name }}</p>
+      <p><strong>Email Address:</strong> {{ selectedCV.email_address }}</p>
+      <p><strong>Phone Number:</strong> {{ selectedCV.phone_number }}</p>
+      <p><strong>Technical Skills:</strong> {{ selectedCV.technical_skills }}</p>
+      <p><strong>Candidate Profile:</strong> {{ selectedCV.candidate_profile }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,58 @@
+mat-card {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.file-upload-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.file-name {
+  margin-left: 10px;
+  font-style: italic;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 100px;
+}
+
+.error {
+  margin-top: 20px;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+button[mat-raised-button] {
+  margin-right: 10px;
+}
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+/* Style personnalisé pour le bouton "Voir les résultats" */
+/* Style personnalisé pour le bouton "Voir les résultats" */
+.custom-submit-button {
+  background-color: #e89c00; /* Couleur de fond */
+  color: white; /* Couleur du texte */
+}
+
+/* Style pour le bouton désactivé */
+.custom-submit-button[disabled] {
+  background-color: #b0b0b0; /* Couleur grise pour le bouton désactivé */
+  color: white; /* Couleur du texte pour le bouton désactivé */
+}
+
+/* Style pour le bouton actif lors du survol */
+.custom-submit-button:hover:not([disabled]) {
+  background-color: #d48b00; /* Couleur de fond lors du survol si le bouton est actif */
+}

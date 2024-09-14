@@ -1,0 +1,91 @@
+/* Style pour les cellules du tableau */
+.table-container {
+  margin: 16px;
+}
+
+.mat-card {
+  background-color: #ffffff;
+}
+
+.mat-card-title {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.mat-card-content p {
+  margin: 8px 0;
+}
+
+/* Espacement personnalisé pour la colonne Phone Number */
+.mat-cell.phone-number {
+  padding: 12px; /* Augmenter l'espace autour du contenu */
+  text-align: left; /* Aligner le texte à gauche si nécessaire */
+}
+
+/* Espacement personnalisé pour la colonne Technical Skills */
+.mat-cell.technical-skills {
+  padding: 8px; /* Réduire l'espace autour du contenu */
+  text-align: left; /* Aligner le texte à gauche si nécessaire */
+}
+
+/* Ajustement des entêtes pour les colonnes personnalisées */
+.mat-header-cell.phone-number {
+  padding: 12px; /* Espacement pour les entêtes */
+}
+
+.mat-header-cell.technical-skills {
+  padding: 8px; /* Espacement pour les entêtes */
+}
+.table-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne tout à gauche */
+  margin: 16px;
+}
+
+.search-container {
+  margin-bottom: 8px; /* Espacement entre le champ de filtre et la description */
+}
+
+.filter-description {
+  margin-bottom: 16px; /* Espacement en dessous de la description */
+}
+
+.filter-description span {
+  font-size: 14px;
+  color: #666; /* Couleur de texte gris pour le descriptif */
+}
+
+.mat-form-field {
+  width: 100%; /* Assure que le champ de filtre occupe toute la largeur disponible */
+}
+.table-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne tout à gauche */
+  margin: 16px;
+  width: 100%; /* Assure que le conteneur prend toute la largeur */
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row; /* Place le label et le champ de recherche sur une même ligne */
+  align-items: center; /* Aligne le label et le champ de recherche verticalement au centre */
+  margin-bottom: 8px; /* Espacement entre le champ de filtre et la description */
+}
+
+.search-container label {
+  margin-right: 12px; /* Espacement entre le label et le champ de recherche */
+  font-weight: bold; /* Style du label */
+}
+
+.filter-description {
+  margin-top: 8px; /* Espacement au-dessus de la description */
+  color: #666; /* Couleur de texte gris pour le descriptif */
+  font-size: 14px; /* Taille de police pour le descriptif */
+}
+
+.mat-form-field {
+  flex: 1; /* Le champ de recherche prend tout l'espace restant */
+  min-width: 200px; /* Largeur minimale pour le champ de recherche */
+}

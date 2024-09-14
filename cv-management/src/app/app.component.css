@@ -1,0 +1,40 @@
+/* Style pour la barre de navigation */
+.mat-toolbar.mat-primary {
+  background-color: #060f59; /* Couleur de fond de la barre de navigation */
+  color: white; /* Couleur du texte */
+}
+
+/* Style pour les boutons de navigation */
+.nav-buttons {
+  display: flex;
+  justify-content: center; /* Centre les boutons horizontalement */
+  flex: 1; /* Permet aux boutons d'occuper l'espace disponible au centre */
+}
+
+/* Style pour les boutons dans la barre de navigation */
+.mat-toolbar .mat-button {
+  color: white; /* Couleur du texte des boutons */
+  margin: 0 5px; /* Ajuste l'espacement horizontal entre les boutons */
+}
+
+/* Style pour aligner les boutons Admin et Logout à droite */
+.mat-toolbar .mat-toolbar-row {
+  display: flex;
+  align-items: center; /* Aligne les éléments verticalement */
+  justify-content: space-between; /* Espace entre les boutons de navigation et le bouton logout */
+}
+
+.admin-logout-button {
+  margin-left: 10px; /* Ajoute un espacement entre les boutons */
+}
+
+/* Style pour la barre latérale (mat-drawer) */
+.drawer {
+  width: 250px; /* Largeur de la barre latérale */
+}
+
+/* Style pour le contenu principal */
+.main-content {
+  padding: 20px;
+  margin-top: 20px;
+}
