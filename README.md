@@ -1,5 +1,5 @@
-![architecture](https://github.com/user-attachments/assets/15d394dd-aed7-449d-a844-7750d8f568c8) <br>
-### Data Flow
+#![Architecture](https://github.com/user-attachments/assets/c9c35bc1-e67a-4303-a4ca-4d58f20c384c)
+## Data Flow
 
 The data flow in this system follows these steps:
 
