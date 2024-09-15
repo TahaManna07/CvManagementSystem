@@ -1,4 +1,4 @@
-#![Architecture](https://github.com/user-attachments/assets/c9c35bc1-e67a-4303-a4ca-4d58f20c384c)
+![Architecture](https://github.com/user-attachments/assets/c9c35bc1-e67a-4303-a4ca-4d58f20c384c)
 ## Data Flow
 
 The data flow in this system follows these steps:
